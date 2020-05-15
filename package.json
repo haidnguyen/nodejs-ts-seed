@@ -1,11 +1,13 @@
 {
   "name": "nodejs-typescript-template",
   "version": "0.0.1",
-  "description": "A template to start a Nodejs project with Typescript",
+  "description": "A template to start a Nodejs project with Typescript, eslint and prettier",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/**/*.{ts,js}",
+    "clean": "rm -rf ./dist",
     "build": "tsc",
+    "build:clean": "yarn run clean && tsc",
     "build:watch": "tsc -w",
     "start": "node ./dist/index.js"
   },
@@ -13,8 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
+    "tslib": "^1.11.1"
   },
   "devDependencies": {
     "@types/node": "^13.13.4",
@@ -23,6 +24,7 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
   }
 }
